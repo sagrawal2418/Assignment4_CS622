@@ -25,7 +25,7 @@ public class MyExecutor {
 
         //iterate through the array
         for (int i = 0; i < 5; i++) {
-            myThreads[i] = new Thread(MyExecutor::handleMultiThread); //create object of thread and execute the handleMultiThread method in the run method of thread
+            myThreads[i] = new Thread(() -> handleMultiThread()); //create object of thread and execute the handleMultiThread method in the run method of thread
         }
 
         long startTime = System.currentTimeMillis(); //store the start time of the multi threading program
